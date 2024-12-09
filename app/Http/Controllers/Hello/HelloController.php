@@ -11,4 +11,9 @@ class HelloController extends Controller
     {
         return "<h1>Hello dari Controller!</h1>";
     }
+
+    public function hello()
+    {
+        return view('coba.hello');
+    }
 }
