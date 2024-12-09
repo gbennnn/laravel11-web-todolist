@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <h1>Hello Laravel dari Blade</h1>
+    <h1>Hello {{ $nama }} Laravel dari Blade umur {{ $umur }} tahun</h1>
 </body>
 
 </html>

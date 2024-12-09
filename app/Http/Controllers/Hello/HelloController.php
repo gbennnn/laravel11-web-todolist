@@ -14,6 +14,13 @@ class HelloController extends Controller
 
     public function hello()
     {
-        return view('coba.hello');
+        $nama = "Budi";
+        $data = [
+            "nama" => $nama,
+            "umur" => 20
+        ];
+
+        // return view('coba.hello', ["nama" => $nama]);
+        return view('coba.hello', $data);
     }
 }
