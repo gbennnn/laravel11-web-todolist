@@ -1,12 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Todo\TodoController;
 use App\Http\Controllers\Hello\HelloController;
 
-Route::get('/', function () {
-    // return view('welcome');
-    return view('todo.app');
-});
+Route::get('/', [TodoController::class, 'index']); // mengakses method index dari TodoController
 
 // Membuat route baru dengan nama /coba (localhost:8000/coba)
 Route::get('/coba', function () {
