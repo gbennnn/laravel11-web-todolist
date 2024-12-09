@@ -28,6 +28,10 @@ class TodoController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'task' => 'required|min:3|max:50'
+        ]);
+
         dd($request);
     }
 
