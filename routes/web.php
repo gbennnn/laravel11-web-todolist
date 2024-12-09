@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Hello\HelloController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -15,3 +16,6 @@ Route::get('/coba', function () {
 Route::get('/coba/hello', function () {
     return 'Hello, World!'; // return string 'Hello, World!'
 });
+
+// mengakses controller HelloController
+Route::get('/hello', [HelloController::class, 'index']); // mengakses method index dari HelloController
