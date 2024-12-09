@@ -17,5 +17,8 @@ Route::get('/coba/hello', function () {
     return 'Hello, World!'; // return string 'Hello, World!'
 });
 
-// mengakses controller HelloController
+// mengakses controller HelloController method index
 Route::get('/hello', [HelloController::class, 'index']); // mengakses method index dari HelloController
+
+// mengakses controller HelloController method hello
+Route::get('/demo', [HelloController::class, 'hello']);
