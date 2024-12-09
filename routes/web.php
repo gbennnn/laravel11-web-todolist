@@ -4,7 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Hello\HelloController;
 
 Route::get('/', function () {
-    return view('welcome');
+    // return view('welcome');
+    return view('todo.app');
 });
 
 // Membuat route baru dengan nama /coba (localhost:8000/coba)
