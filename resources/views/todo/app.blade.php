@@ -99,7 +99,7 @@
                                 </li>
                                 <!-- 05. Update Data -->
                                 <li class="list-group-item collapse" id="collapse-{{ $loop->index }}">
-                                    <form action="{{ url('/'.$item->id) }}" method="POST">
+                                    <form action="{{ url('/update/'.$item->id) }}" method="POST">
                                         @csrf
                                         @method('put')
                                         <div>
