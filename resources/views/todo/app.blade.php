@@ -94,11 +94,11 @@
                                     <div class="btn-group">
                                         <button class="btn btn-danger btn-sm delete-btn">✕</button>
                                         <button class="btn btn-primary btn-sm edit-btn" data-bs-toggle="collapse"
-                                            data-bs-target="#collapse-1" aria-expanded="false">✎</button>
+                                            data-bs-target="#collapse-{{ $loop->index }}" aria-expanded="false">✎</button>
                                     </div>
                                 </li>
                                 <!-- 05. Update Data -->
-                                <li class="list-group-item collapse" id="collapse-1">
+                                <li class="list-group-item collapse" id="collapse-{{ $loop->index }}">
                                     <form action="" method="POST">
                                         <div>
                                             <div class="input-group mb-3">
@@ -110,12 +110,12 @@
                                         <div class="d-flex">
                                             <div class="radio px-2">
                                                 <label>
-                                                    <input type="radio" value="1" name="is_done"> Selesai
+                                                    <input type="radio" value="1" name="is_done" {{ $item->is_done=='1'?'checked':'' }}> Selesai
                                                 </label>
                                             </div>
                                             <div class="radio">
                                                 <label>
-                                                    <input type="radio" value="0" name="is_done"> Belum
+                                                    <input type="radio" value="0" name="is_done" {{ $item->is_done=='0'?'checked':'' }}> Belum
                                                 </label>
                                             </div>
                                         </div>
