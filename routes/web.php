@@ -7,6 +7,7 @@ use App\Http\Controllers\Hello\HelloController;
 Route::get('/', [TodoController::class, 'index']); // mengakses method index dari TodoController
 Route::post('/', [TodoController::class, 'store']); // mengakses method index dari TodoController
 Route::put('/update/{id}', [TodoController::class, 'update'])->name('update');
+Route::delete('/delete/{id}', [TodoController::class, 'delete']);
 
 // Membuat route baru dengan nama /coba (localhost:8000/coba)
 Route::get('/coba', function () {
