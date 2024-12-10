@@ -73,7 +73,7 @@
                 <div class="card">
                     <div class="card-body">
                         <!-- 03. Searching -->
-                        <form id="todo-form" action="" method="get">
+                        <form id="todo-form" action="{{ url('/') }}" method="get">
                             <div class="input-group mb-3">
                                 <input type="text" class="form-control" name="search" value="" 
                                     placeholder="masukkan kata kunci">
@@ -97,7 +97,7 @@
                                     <input type="text" class="form-control edit-input" style="display: none;"
                                         value="{{ $item->task }}">
                                     <div class="btn-group">
-                                        <form action="" method="POST">
+                                        <form action="{{ route('delete', ['id' => $item->id]) }}" method="POST" onsubmit="return confirm('Yakin ingin menghapus data ini?')">
                                             @csrf
                                             @method('delete')
                                             <button class="btn btn-danger btn-sm delete-btn">✕</button>
