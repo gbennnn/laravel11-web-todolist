@@ -40,11 +40,22 @@
             <div class="col-md-8">
              <div class="card mb-3">
                 <div class="card-body">
+                    @if ($errors->any())
+                        <div class="alert alert-danger">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+
+                        
+                    @endif
                     <!-- 02. Form input data -->
                     <form id="todo-form" action="{{ url('/') }}" method="post">
                         @csrf
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control" name="task" id="todo-input"
+                            <input type="text" class="form-control" name="task" value="{{ old('task') }}" id="todo-input"
                                 placeholder="Tambah task baru" required>
                             <button class="btn btn-primary" type="submit">
                                 Simpan
