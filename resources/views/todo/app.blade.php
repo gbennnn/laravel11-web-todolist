@@ -134,6 +134,7 @@
                                 </li>
                             @endforeach
                         </ul>
+                        {{ $data->links() }}
                         
                         
                     </div>
