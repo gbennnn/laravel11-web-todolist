@@ -75,7 +75,7 @@
                         <!-- 03. Searching -->
                         <form id="todo-form" action="{{ url('/') }}" method="get">
                             <div class="input-group mb-3">
-                                <input type="text" class="form-control" name="search" value="" 
+                                <input type="text" class="form-control" name="search" value="{{ request('search') }}" 
                                     placeholder="masukkan kata kunci">
                                 <button class="btn btn-secondary" type="submit">
                                     Cari
