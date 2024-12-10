@@ -58,7 +58,7 @@
                         
                     @endif
                     <!-- 02. Form input data -->
-                    <form id="todo-form" action="{{ url('/') }}" method="post">
+                    <form id="todo-form" action="{{ url('home.post') }}" method="post">
                         @csrf
                         <div class="input-group mb-3">
                             <input type="text" class="form-control" name="task" value="{{ old('task') }}" id="todo-input"

@@ -46,7 +46,7 @@ class TodoController extends Controller
 
         Todo::create($data);
 
-        return redirect('/')->with('success', 'Task berhasil ditambahkan!');
+        return redirect()->route('home')->with('success', 'Task berhasil ditambahkan!');
     }
 
     /**
