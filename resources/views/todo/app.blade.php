@@ -99,7 +99,9 @@
                                 </li>
                                 <!-- 05. Update Data -->
                                 <li class="list-group-item collapse" id="collapse-{{ $loop->index }}">
-                                    <form action="" method="POST">
+                                    <form action="{{ url('/'.$item->id) }}" method="POST">
+                                        @csrf
+                                        @method('put')
                                         <div>
                                             <div class="input-group mb-3">
                                                 <input type="text" class="form-control" name="task"
